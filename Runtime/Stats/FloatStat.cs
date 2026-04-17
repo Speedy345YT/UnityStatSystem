@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace StatSystem
 {
-    [Serializable]
-    [InlineProperty]
-    [HideDuplicateReferenceBox]
     public class FloatStat : IStat<float>
     {
         public float baseValue;

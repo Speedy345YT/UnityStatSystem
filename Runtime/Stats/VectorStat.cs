@@ -1,13 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Opsive.Shared.Utility;
-using Sirenix.OdinInspector;
 using UnityEngine;
 namespace StatSystem
 {
-    [Serializable]
-    [InlineProperty]
-    [HideDuplicateReferenceBox]
     public class VectorStat : IStat<Vector3>
     {
         public Vector3 baseValue;
