@@ -137,6 +137,7 @@ namespace StatSystem
         public int FloorValue => Mathf.FloorToInt(Value);
         public int RoundValue => Mathf.RoundToInt(Value);
         public int CeilValue => Mathf.CeilToInt(Value);
-        public float ChangePercent => Value / baseValue;
+        public float ChangeValue => Value / baseValue;
+        public float ChangePercent => Value / baseValue * 100;
     }
 }
