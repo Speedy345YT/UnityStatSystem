@@ -12,6 +12,8 @@ namespace StatSystem
         void ClearModifier(StatModifier<T> mod);
         void UpdateModifier(StatModifier<T> mod, T value);
         T Value { get; }
+        T CachedValue { get; }
+        bool IsDirty { get; }
     }
     public abstract class StatModifierBase
     {

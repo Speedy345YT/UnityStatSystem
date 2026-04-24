@@ -8,7 +8,15 @@ namespace StatSystem
         public List<StatModifier<Vector3>> modifiers { get; } = new();
 
         public Vector3 cachedValue;
+        public Vector3 CachedValue
+        {
+            get { return cachedValue; }
+        }
         bool isDirty = true;
+        public bool IsDirty
+        {
+            get { return isDirty; }
+        }
         public VectorStat(Vector3 baseValue)
         {
             this.baseValue = baseValue;
@@ -134,41 +142,11 @@ namespace StatSystem
                 return cachedValue;
             }
         }
-        public float x
-        {
-            get
-            {
-                return Value.x;
-            }
-        }
-        public float y
-        {
-            get
-            {
-                return Value.y;
-            }
-        }
-        public float z
-        {
-            get
-            {
-                return Value.z;
-            }
-        }
-        public float magnitude
-        {
-            get
-            {
-                return Value.magnitude;
-            }
-        }
-        public Vector3 normalized
-        {
-            get
-            {
-                return Value.normalized;
-            }
-        }
+        public float x => Value.x;
+        public float y => Value.y;
+        public float z => Value.z;
+        public float magnitude => Value.magnitude;
+        public Vector3 normalized => Value.normalized;
+        public Vector3 ChangePercent => new Vector3(Value.x / baseValue.x, Value.y / baseValue.y, Value.z / baseValue.z);
     }
-
 }

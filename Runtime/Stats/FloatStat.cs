@@ -10,7 +10,16 @@ namespace StatSystem
         public List<StatModifier<float>> modifiers = new();
 
         public float cachedValue;
+        public float CachedValue
+        {
+            get { return cachedValue; }
+        }
         bool isDirty = true;
+        public bool IsDirty
+        {
+            get { return isDirty; }
+        }
+
         public FloatStat(float baseValue)
         {
             this.baseValue = baseValue;
@@ -126,7 +135,8 @@ namespace StatSystem
             }
         }
         public int FloorValue => Mathf.FloorToInt(Value);
-        public int IntValue => Mathf.RoundToInt(Value);
+        public int RoundValue => Mathf.RoundToInt(Value);
         public int CeilValue => Mathf.CeilToInt(Value);
+        public float ChangePercent => Value / baseValue;
     }
 }
